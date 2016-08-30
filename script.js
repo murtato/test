@@ -37,7 +37,7 @@ $(document).keypress(function(key) {
      player1.removeClass('red');
      player1.addClass('blue');
     }
-    else if(player1Count %2 == 0) {
+    else if(player1Count % 2 == 0) {
       player1.removeClass('blue');
      player1.addClass('red');
     }
@@ -58,7 +58,7 @@ $(document).keypress(function(key){
     $('.container').append(newBullet);
     var currentP1Position = player1.css("top");
     newBullet.css("top", currentP1Position);
-    newBullet.animate({left: '485px'}, 1000, "linear", function(){
+    newBullet.animate({left: '465px'}, 1000, "linear", function(){
       $( newBullet ).remove();
       clearInterval(checker);
     });
@@ -69,7 +69,7 @@ $(document).keypress(function(key){
         clearInterval(checker);
       }
     }
-    , 80);
+    , 100);
 //Collision detection here
     function collision(newBullet, enemyPlayer) {
       // var newBullet = $('<div class="player1Bullets"></div>')
@@ -107,10 +107,10 @@ $(document).keypress(function(key){
       console.log(bar)
   // win checker
       function winChecker() {
-      if (bar.value === -1){
-      } console.log ("PLAYER 1 WINS!!!");
-    };
-
+        if (bar.value -= 0){
+          console.log ("PLAYER 1 WINS!!!");
+        }
+      };
     }
   }
 })
@@ -150,7 +150,7 @@ $(document).keypress(function(key) {
      player2.removeClass('blue');
      player2.addClass('red');
     }
-    else if(player2Count %2 == 0) {
+    else if(player2Count % 2 == 0) {
       player2.removeClass('red');
      player2.addClass('blue');
     }
@@ -179,7 +179,7 @@ $(document).keypress(function(key) {
         clearInterval(checker);
         subtractHealth();
         }
-      }, 120)
+      }, 100)
 //Collision detection here
   function collision2(newBullet, enemyPlayer) {
     // var newBullet = $('<div class="player1Bullets"></div>')
